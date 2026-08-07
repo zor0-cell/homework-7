@@ -1,0 +1,554 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #fff;
+  color: #111; /* было #1111 — некорректный hex */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.logo-text {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #666;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-login {
+  padding: 12px 28px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  background: transparent;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-dark {
+  display: inline-block;
+  padding: 14px 28px; /* было 14px 228px — раздувало кнопку на всю ширину */
+  border: none;
+  border-radius: 30px;
+  background-color: #000;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-cta {
+  margin-top: 8px;
+}
+
+/* ===== Hero ===== */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 80px 80px 80px;
+  gap: 60px;
+}
+
+.hero-content {
+  /* было .here-content — не совпадало с HTML, поэтому стили не применялись */
+  flex: 1;
+  max-width: 540px;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+}
+
+.hero-description {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 40px;
+  max-width: 460px;
+}
+
+.hero-subtitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-image-container {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Responsive ===== */
+
+.inline-link {
+  color: #111;
+  text-decoration: underline;
+}
+
+/* ===== Stats (70%) ===== */
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 80px;
+}
+
+.stats-image {
+  flex: 1;
+  max-width: 380px;
+  display: flex;
+  justify-content: center;
+}
+
+.stats-illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.stats-content {
+  flex: 1;
+  max-width: 420px;
+}
+
+.stats-title {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.stats-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ===== Why Switch ===== */
+
+.why-switch {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 80px 100px 80px;
+}
+
+.section-title {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 48px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+}
+
+.feature-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.feature-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  max-width: 280px;
+}
+
+.btn-pink {
+  display: inline-block;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 30px;
+  background-color: #f2b6b0;
+  color: #111;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ===== Plans ===== */
+
+.plans {
+  background-color: #fbe9e9;
+  padding: 60px 0 0 0;
+}
+
+.plans-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px 60px 80px;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin-top: 40px;
+}
+
+.plan-icon {
+  width: 56px;
+  height: 70px;
+  margin-bottom: 16px;
+}
+
+.plan-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.plan-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.plan-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  max-width: 300px;
+}
+
+.logos-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 80px;
+  background-color: #fff;
+}
+
+.logos-label {
+  font-size: 16px;
+  font-weight: 500;
+  flex-shrink: 0;
+  max-width: 140px;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 32px;
+  column-gap: 60px;
+  flex: 1;
+  align-items: center;
+}
+
+.client-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2b2b3d;
+  opacity: 0.85;
+}
+
+.client-logo--script {
+  font-family: "Brush Script MT", cursive;
+  font-size: 24px;
+}
+
+.client-logo--wavy {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 24px;
+}
+
+.client-logo--serif {
+  font-family: Georgia, serif;
+}
+
+.client-logo--wide {
+  letter-spacing: 2px;
+}
+
+.client-logo--underline {
+  text-decoration: underline;
+  font-family: Georgia, serif;
+}
+
+.client-logo--small {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.client-logo--mono {
+  font-family: "Courier New", monospace;
+  border: 2px solid #2b2b3d;
+  padding: 2px 8px;
+  font-size: 16px;
+}
+
+/* ===== AC Hub ===== */
+
+.ac-hub {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 80px 60px 80px;
+  gap: 60px;
+}
+
+.ac-hub-content {
+  flex: 1;
+  max-width: 460px;
+}
+
+.ac-hub-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.ac-hub-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 28px;
+}
+
+.ac-hub-image {
+  flex: 1;
+  max-width: 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.ac-hub-image svg {
+  width: 100%;
+  height: auto;
+}
+
+/* ===== CTA banner ===== */
+
+.cta-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto 80px auto;
+  padding: 48px 60px;
+  background-color: #9fd8d0;
+  border-radius: 16px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cta-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.cta-subtitle {
+  font-size: 15px;
+  color: #1a1a1a;
+}
+
+/* ===== Footer ===== */
+
+.site-footer {
+  background-color: #2b2b3d;
+  color: #d5d5dd;
+  padding: 48px 80px 32px 80px;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.footer-logo-icon {
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  color: #2b2b3d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer-logo-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+.footer-col h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: #b3b3c0;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-col a:hover {
+  color: #fff;
+}
+
+.footer-contact {
+  margin-bottom: 32px;
+}
+
+.footer-contact h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.footer-contact p {
+  font-size: 13px;
+  color: #b3b3c0;
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  border-top: 1px solid #44445a;
+  font-size: 12px;
+  color: #9a9aac;
+}
+
+.footer-bottom a {
+  color: #9a9aac;
+  text-decoration: none;
+}
+
+.footer-badge {
+  margin-left: auto;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #6a6a80;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 700;
+  color: #cfcfda;
+}
